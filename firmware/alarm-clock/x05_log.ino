@@ -6,7 +6,6 @@
 #endif
 
 #define logLine() logRaw('\n')
-#define logHeader() logRaw(millis());logRaw(" | ");
+#define logHeader() logRaw('[');logRaw(millis());logRaw("] ")
 #define logInfo(msg) logHeader();logRaw(F(msg));logLine()
 #define logValue(msg,val) logHeader();logRaw(F(msg));logRaw(val);logLine()
-

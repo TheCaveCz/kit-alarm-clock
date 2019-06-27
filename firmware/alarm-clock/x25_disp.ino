@@ -31,6 +31,15 @@ const uint8_t DISP_ALARM[] = {
   0
 };
 
+const uint8_t DISP_RESET[] = {
+  SEG_E | SEG_G,
+  SEG_A | SEG_C | SEG_D | SEG_F | SEG_G,
+  SEG_D | SEG_E | SEG_F | SEG_G,
+  0
+};
+
+
+
 uint16_t dispTime;
 uint8_t dispDots;
 uint8_t dispMask;
@@ -50,9 +59,9 @@ void dispShowBuffer() {
   t /= 10;
   buf[2] = dispMask & 0b0010 ? (dispDrive.encodeDigit(t % 10) | (dispDots & 0b0010 ? 0b10000000 : 0)) : 0;
   t /= 10;
-  buf[1] = (dispMask & 0b0100 ? dispDrive.encodeDigit(t % 10) : 0) | (dispDots & 0b0100 ? 0b10000000 : 0);
+  buf[1] = dispMask & 0b0100 ? (dispDrive.encodeDigit(t % 10) | (dispDots & 0b0100 ? 0b10000000 : 0)) : 0;
   t /= 10;
-  buf[0] = (dispMask & 0b1000 ? dispDrive.encodeDigit(t % 10) : 0) | (dispDots & 0b1000 ? 0b10000000 : 0);
+  buf[0] = dispMask & 0b1000 ? (dispDrive.encodeDigit(t % 10) | (dispDots & 0b1000 ? 0b10000000 : 0)) : 0;
   t /= 10;
 
   dispDrive.setSegments(buf);

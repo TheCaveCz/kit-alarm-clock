@@ -4,9 +4,6 @@
 typedef struct {
   uint8_t magic;
   char blynkToken[33];
-  uint8_t alarmHr;
-  uint8_t alarmMin;
-  uint8_t alarmOn;
 } Config;
 
 Config config;
@@ -32,7 +29,6 @@ void configRead() {
     logInfo("Unable to read config");
     
     memset(&config, 0, sizeof(config));
-    config.alarmHr = 9;
     
     configWrite();
   }

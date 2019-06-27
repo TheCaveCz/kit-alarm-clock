@@ -20,6 +20,7 @@
 
 // https://github.com/blynkkk/blynk-library
 #include <BlynkSimpleEsp8266.h>
+#include <WidgetRTC.h>
 
 // https://github.com/tzapu/WiFiManager
 #include <WiFiManager.h>
@@ -43,9 +44,11 @@
 #define PIN_BTN1 D1
 #define PIN_BTN2 D2
 
-//#define BLYNK_PIN_LIMIT V0
-//#define BLYNK_PIN_VALUE V1
-//#define BLYNK_PIN_ALARM V2
+#define BLYNK_PIN_TIMEINPUT V0
+#define BLYNK_PIN_ALARMENABLE V1
+#define BLYNK_PIN_COUNTDOWN_MIN V2
+#define BLYNK_PIN_COUNTDOWN_SEC V3
+#define BLYNK_PIN_COUNTDOWN_START V4
 
 
 // Logging over Serial
