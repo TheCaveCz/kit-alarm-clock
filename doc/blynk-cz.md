@@ -52,5 +52,14 @@ Další komponenta je Notification:
 
 <img src="pictures/setup-p-notification.png" width=320>
 
+A je to, základní nastavení je hotovo, nyní stiskněte ikonu Play a projekt by měl vypadat nějak takto:
 
+<img src="pictures/setup-p-ready.png" width=320>
 
+Klepnutím na Alarm time můžete nastavit čas a dny alarmu.
+
+<img src="pictures/setup-p-timeset.png" width=320>
+
+Tímto jste úspěšně nastavili vše potřebné pro provoz budíku, gratulujeme!
+
+<img src="pictures/setup-p-readyset.png" width=320>
