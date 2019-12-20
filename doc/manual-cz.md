@@ -26,3 +26,4 @@
 
 ![](pictures/manual-cz-12.jpeg)
 
+[Nastavení budíku a aplikace](blynk-cz.md)
